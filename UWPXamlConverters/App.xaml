@@ -8,6 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <converters:StringtovisbilityConverter x:Name="StringToVisibilityConverter"></converters:StringtovisbilityConverter>
+            <converters:StringToVisibilityReverseConverter x:Name="StringToVisibilityReverseConverter"></converters:StringToVisibilityReverseConverter>
 
         </ResourceDictionary>
 

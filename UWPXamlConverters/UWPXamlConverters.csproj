@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\StringToVisibilityConverter.cs" />
+    <Compile Include="src\StringToVisibilityReverseConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
