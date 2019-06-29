@@ -7,8 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <Grid Padding="32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color (Red, Blue, Green)" x:Name="ColorTextBox"/>
+            <Grid Grid.Column="1" Height="100" Width="100" Background="Red" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Red,Mode=OneWay}" />
+            <Grid Grid.Column="1" Height="100" Width="100" Background="Blue" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Blue,Mode=OneWay}" />
+            <Grid Grid.Column="1" Height="100" Width="100" Background="Green" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Green,Mode=OneWay}" />
+        </Grid>
+    </StackPanel>
 </Page>

@@ -2,6 +2,14 @@
     x:Class="UWPXamlConverters.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:UWPXamlConverters.Converters"
     xmlns:local="using:UWPXamlConverters">
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:StringtovisbilityConverter x:Name="StringToVisibilityConverter"></converters:StringtovisbilityConverter>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
 </Application>
