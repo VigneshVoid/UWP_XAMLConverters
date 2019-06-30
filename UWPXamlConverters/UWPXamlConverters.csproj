@@ -123,6 +123,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\StringToBoolConverter.cs" />
     <Compile Include="src\StringToVisibilityConverter.cs" />
     <Compile Include="src\StringToVisibilityReverseConverter.cs" />
   </ItemGroup>
