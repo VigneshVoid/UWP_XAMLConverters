@@ -42,5 +42,17 @@
             <ToggleSwitch Margin="12,0" Grid.Column="2" OnContent="Blue" OffContent="Not Blue" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Blue,Mode=OneWay}" ></ToggleSwitch>
             <ToggleSwitch Margin="12,0" Grid.Column="3" OnContent="Green" OffContent="Not Green" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Green,Mode=OneWay}"></ToggleSwitch>
         </Grid>
+        <Grid Padding="32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color it will show other colors except the entered color (Red, Blue, Green)" x:Name="ColorBoolReverseTextBox" Text=""/>
+            <ToggleSwitch Margin="12,0" Grid.Column="1" OnContent="Not Red" OffContent="Red" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Red,Mode=OneWay}"></ToggleSwitch>
+            <ToggleSwitch Margin="12,0" Grid.Column="2" OnContent="Not Blue" OffContent="Blue" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Blue,Mode=OneWay}" ></ToggleSwitch>
+            <ToggleSwitch Margin="12,0" Grid.Column="3" OnContent="Not Green" OffContent="Green" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Green,Mode=OneWay}"></ToggleSwitch>
+        </Grid>
     </StackPanel>
 </Page>

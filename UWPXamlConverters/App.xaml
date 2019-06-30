@@ -10,6 +10,7 @@
             <converters:StringtovisbilityConverter x:Name="StringToVisibilityConverter"></converters:StringtovisbilityConverter>
             <converters:StringToVisibilityReverseConverter x:Name="StringToVisibilityReverseConverter"></converters:StringToVisibilityReverseConverter>
             <converters:StringToBoolConverter x:Name="StringToBoolConverter"></converters:StringToBoolConverter>
+            <converters:StringToBoolReverseConverter x:Name="StringToBoolReverseConverter"></converters:StringToBoolReverseConverter>
         </ResourceDictionary>
 
     </Application.Resources>
