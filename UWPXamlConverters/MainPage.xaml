@@ -7,52 +7,62 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <StackPanel>
-        <Grid Padding="32">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color (Red, Blue, Green)" x:Name="ColorTextBox"/>
-            <Grid Grid.Column="1" Height="100" Width="100" Background="Red" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Red,Mode=OneWay}" />
-            <Grid Grid.Column="1" Height="100" Width="100" Background="Blue" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Blue,Mode=OneWay}" />
-            <Grid Grid.Column="1" Height="100" Width="100" Background="Green" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Green,Mode=OneWay}" />
-        </Grid>
-        <Grid Padding="32">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color it will show other colors except the entered color (Red, Blue, Green)" x:Name="ColorReverseTextBox" Text=""/>            
-            <Grid Grid.Column="1" Height="100" Width="100" Background="Red" Visibility="{Binding Text,ElementName=ColorReverseTextBox,Converter={StaticResource StringToVisibilityReverseConverter},ConverterParameter=Red,Mode=OneWay}" />
-            <Grid Grid.Column="2" Height="100" Width="100" Background="Blue" Visibility="{Binding Text,ElementName=ColorReverseTextBox,Converter={StaticResource StringToVisibilityReverseConverter},ConverterParameter=Blue,Mode=OneWay}" />
-            <Grid Grid.Column="3" Height="100" Width="100" Background="Green" Visibility="{Binding Text,ElementName=ColorReverseTextBox,Converter={StaticResource StringToVisibilityReverseConverter},ConverterParameter=Green,Mode=OneWay}" />
-        </Grid>
-        <Grid Padding="32">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color (Red, Blue, Green)" x:Name="ColorBoolTextBox" Text=""/>
-            <ToggleSwitch Margin="12,0" Grid.Column="1" OnContent="Red" OffContent="Not Red" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Red,Mode=OneWay}"></ToggleSwitch>
-            <ToggleSwitch Margin="12,0" Grid.Column="2" OnContent="Blue" OffContent="Not Blue" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Blue,Mode=OneWay}" ></ToggleSwitch>
-            <ToggleSwitch Margin="12,0" Grid.Column="3" OnContent="Green" OffContent="Not Green" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Green,Mode=OneWay}"></ToggleSwitch>
-        </Grid>
-        <Grid Padding="32">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color it will show other colors except the entered color (Red, Blue, Green)" x:Name="ColorBoolReverseTextBox" Text=""/>
-            <ToggleSwitch Margin="12,0" Grid.Column="1" OnContent="Not Red" OffContent="Red" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Red,Mode=OneWay}"></ToggleSwitch>
-            <ToggleSwitch Margin="12,0" Grid.Column="2" OnContent="Not Blue" OffContent="Blue" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Blue,Mode=OneWay}" ></ToggleSwitch>
-            <ToggleSwitch Margin="12,0" Grid.Column="3" OnContent="Not Green" OffContent="Green" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Green,Mode=OneWay}"></ToggleSwitch>
-        </Grid>
-    </StackPanel>
+    <ScrollViewer>
+        <StackPanel>
+            <Grid Padding="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color (Red, Blue, Green)" x:Name="ColorTextBox"/>
+                <Grid Grid.Column="1" Height="100" Width="100" Background="Red" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Red,Mode=OneWay}" />
+                <Grid Grid.Column="1" Height="100" Width="100" Background="Blue" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Blue,Mode=OneWay}" />
+                <Grid Grid.Column="1" Height="100" Width="100" Background="Green" Visibility="{Binding Text,ElementName=ColorTextBox,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=Green,Mode=OneWay}" />
+            </Grid>
+            <Grid Padding="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color it will show other colors except the entered color (Red, Blue, Green)" x:Name="ColorReverseTextBox" Text=""/>
+                <Grid Grid.Column="1" Height="100" Width="100" Background="Red" Visibility="{Binding Text,ElementName=ColorReverseTextBox,Converter={StaticResource StringToVisibilityReverseConverter},ConverterParameter=Red,Mode=OneWay}" />
+                <Grid Grid.Column="2" Height="100" Width="100" Background="Blue" Visibility="{Binding Text,ElementName=ColorReverseTextBox,Converter={StaticResource StringToVisibilityReverseConverter},ConverterParameter=Blue,Mode=OneWay}" />
+                <Grid Grid.Column="3" Height="100" Width="100" Background="Green" Visibility="{Binding Text,ElementName=ColorReverseTextBox,Converter={StaticResource StringToVisibilityReverseConverter},ConverterParameter=Green,Mode=OneWay}" />
+            </Grid>
+            <Grid Padding="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color (Red, Blue, Green)" x:Name="ColorBoolTextBox" Text=""/>
+                <ToggleSwitch Margin="12,0" Grid.Column="1" OnContent="Red" OffContent="Not Red" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Red,Mode=OneWay}"></ToggleSwitch>
+                <ToggleSwitch Margin="12,0" Grid.Column="2" OnContent="Blue" OffContent="Not Blue" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Blue,Mode=OneWay}" ></ToggleSwitch>
+                <ToggleSwitch Margin="12,0" Grid.Column="3" OnContent="Green" OffContent="Not Green" IsOn="{Binding Text,ElementName=ColorBoolTextBox,Converter={StaticResource StringToBoolConverter},ConverterParameter=Green,Mode=OneWay}"></ToggleSwitch>
+            </Grid>
+            <Grid Padding="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your color it will show other colors except the entered color (Red, Blue, Green)" x:Name="ColorBoolReverseTextBox" Text=""/>
+                <ToggleSwitch Margin="12,0" Grid.Column="1" OnContent="Not Red" OffContent="Red" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Red,Mode=OneWay}"></ToggleSwitch>
+                <ToggleSwitch Margin="12,0" Grid.Column="2" OnContent="Not Blue" OffContent="Blue" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Blue,Mode=OneWay}" ></ToggleSwitch>
+                <ToggleSwitch Margin="12,0" Grid.Column="3" OnContent="Not Green" OffContent="Green" IsOn="{Binding Text,ElementName=ColorBoolReverseTextBox,Converter={StaticResource StringToBoolReverseConverter},ConverterParameter=Green,Mode=OneWay}"></ToggleSwitch>
+            </Grid>
+            <Grid Padding="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ToggleSwitch x:Name="BoolInverter"/>
+                <ToggleSwitch Grid.Column="1" IsOn="{Binding IsOn,ElementName=BoolInverter,Mode=OneWay,Converter={StaticResource BoolToInverterConverter}}"/>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
 </Page>

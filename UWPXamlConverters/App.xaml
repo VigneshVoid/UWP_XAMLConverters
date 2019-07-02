@@ -11,6 +11,7 @@
             <converters:StringToVisibilityReverseConverter x:Name="StringToVisibilityReverseConverter"></converters:StringToVisibilityReverseConverter>
             <converters:StringToBoolConverter x:Name="StringToBoolConverter"></converters:StringToBoolConverter>
             <converters:StringToBoolReverseConverter x:Name="StringToBoolReverseConverter"></converters:StringToBoolReverseConverter>
+            <converters:BoolToInverterConverter x:Name="BoolToInverterConverter"></converters:BoolToInverterConverter>
         </ResourceDictionary>
 
     </Application.Resources>
