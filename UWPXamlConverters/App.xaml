@@ -12,6 +12,7 @@
             <converters:StringToBoolConverter x:Name="StringToBoolConverter"></converters:StringToBoolConverter>
             <converters:StringToBoolReverseConverter x:Name="StringToBoolReverseConverter"></converters:StringToBoolReverseConverter>
             <converters:BoolToInverterConverter x:Name="BoolToInverterConverter"></converters:BoolToInverterConverter>
+            <converters:DateToStringConverter x:Name="DateToStringConverter"></converters:DateToStringConverter>
         </ResourceDictionary>
 
     </Application.Resources>

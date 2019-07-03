@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\BoolToInverterConverter.cs" />
+    <Compile Include="src\DateToStringConverter.cs" />
     <Compile Include="src\StringToBoolConverter.cs" />
     <Compile Include="src\StringToBoolReverseConverter.cs" />
     <Compile Include="src\StringToVisibilityConverter.cs" />

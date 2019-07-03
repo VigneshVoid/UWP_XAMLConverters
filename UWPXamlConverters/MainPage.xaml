@@ -63,6 +63,14 @@
                 <ToggleSwitch x:Name="BoolInverter"/>
                 <ToggleSwitch Grid.Column="1" IsOn="{Binding IsOn,ElementName=BoolInverter,Mode=OneWay,Converter={StaticResource BoolToInverterConverter}}"/>
             </Grid>
+            <Grid Padding="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Enter your date to get selected dd/mm/yyyy or yyyy-mm-dd" x:Name="DateTextBox" Text=""/>
+                <CalendarDatePicker Grid.Column="1" Date="{Binding Text,ElementName=DateTextBox,Mode=TwoWay,Converter={StaticResource DateToStringConverter}}"></CalendarDatePicker>
+            </Grid>
         </StackPanel>
     </ScrollViewer>
 </Page>
