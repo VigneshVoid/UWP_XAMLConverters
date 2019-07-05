@@ -13,6 +13,7 @@
             <converters:StringToBoolReverseConverter x:Name="StringToBoolReverseConverter"></converters:StringToBoolReverseConverter>
             <converters:BoolToInverterConverter x:Name="BoolToInverterConverter"></converters:BoolToInverterConverter>
             <converters:DateToStringConverter x:Name="DateToStringConverter"></converters:DateToStringConverter>
+            <converters:NotEmptyStringToVisibilityConverter x:Name="NotEmptyStringToVisibilityConverter"></converters:NotEmptyStringToVisibilityConverter>
         </ResourceDictionary>
 
     </Application.Resources>
