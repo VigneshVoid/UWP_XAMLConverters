@@ -85,7 +85,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <TextBox BorderThickness="1" VerticalAlignment="Top" Header="Clear me to see my magic" x:Name="EmptyTextBox" Text="Clear Me!"/>
-                <TextBlock Grid.Column="1" Text="Hey! i am visible becaude you typed, instead of leaving empty." Visibility="{Binding Text,ElementName=NotEmptyTextBox,Mode=OneWay,Converter={StaticResource NotEmptyStringToVisibilityConverter}}"></TextBlock>
+                <TextBlock Grid.Column="1" Text="Hey! Thanks for clearing me out" Visibility="{Binding Text,ElementName=EmptyTextBox,Mode=OneWay,Converter={StaticResource EmptyStringToVisibilityConverter}}"></TextBlock>
             </Grid>
         </StackPanel>
     </ScrollViewer>
